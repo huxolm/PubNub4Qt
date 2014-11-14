@@ -5,7 +5,7 @@
 #include <QMetaMethod>
 #include <QCryptographicHash>
 
-static const QString defaultOrigin("qt.pubnub.com");
+static const QString defaultOrigin("pubsub.pubnub.com");
 
 QPubNub::QPubNub(QNetworkAccessManager* networkAccessManager, QObject* parent) : 
   QObject(parent), 
@@ -20,16 +20,7 @@ QPubNub::QPubNub(QNetworkAccessManager* networkAccessManager, QObject* parent) :
 
 QNetworkReply* QPubNub::sendRequest(const QString& path) {
   QNetworkRequest request(baseUrl() + path);
-#ifndef _DEBUG
-  static bool originChecked = false;
-  if (!originChecked) {
-    originChecked = true;
-    if (request.url().host() == defaultOrigin) {
-      qWarning() << "Before running in production, please contact support@pubnub.com for your custom origin."
-        << "\nPlease set the origin from qt.pubnub.com to <your custom origin>.pubnub.com to remove this warning.";
-    }
-  }
-#endif
+
   request.setHeader(QNetworkRequest::UserAgentHeader, "Qt/1.0");
   request.setRawHeader("V", "3.4");
 
