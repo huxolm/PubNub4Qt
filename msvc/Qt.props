@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="UserMacros">
-    <QT_BIN>..\..\..\Desktop\3rdParty\qt-win_release_intel64_v140\bin\</QT_BIN>
+    <QT_BIN>..\..\..\Desktop\3rdParty\qt_win_release_intel64_v140\bin\</QT_BIN>
     <QT_INCLUDE>..\..\..\Desktop\3rdParty\qt-headers\inc\</QT_INCLUDE>    
     <QT_RELEASE_LIB>..\..\..\Desktop\3rdParty\qt-lib_release_intel64_v140\lib\</QT_RELEASE_LIB>
     <QT_DEBUG_LIB>..\..\..\Desktop\3rdParty\qt-lib_debug_intel64_v140\lib\</QT_DEBUG_LIB>
